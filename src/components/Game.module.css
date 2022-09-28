@@ -1,0 +1,26 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(24 24 27);
+    margin-bottom: 4px;
+    margin-left: 10px;
+    margin-right: 10px;
+    min-width: 450px;
+    max-width: 800px;
+}
+.link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    margin-right: 15px;
+    max-width: 200px;;
+}
+.status{
+    margin-right: 15px;
+    margin-left: 15px;
+    text-align: right;
+}
