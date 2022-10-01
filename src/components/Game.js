@@ -29,7 +29,7 @@ const Game = (props) => {
   }, [gameStatus, props.labels]);
 
   return (
-    <div className={classes.container}>
+    <div className={props.labels.length === 0 ? classes.hidden: classes.container}>
       <a
         className={classes.link}
         href={props.url}

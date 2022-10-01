@@ -8,3 +8,9 @@
     background-color: rgb(18 18 18);
     color: white;
 }
+.pageContainer{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    gap: 10px;
+}
