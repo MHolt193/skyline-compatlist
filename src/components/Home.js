@@ -52,14 +52,23 @@ const Home = () => {
             gameTitle={game.title}
             labels={game.labels}
             url={game.html_url}
+            key={game.title}
           />
         );
       })}{" "}
       <div className={classes.pageContainer}>
-        {page > 1 && <button onClick={prevPageHandler}>Prev. Page</button>}
+        {page > 1 && (
+          <button className={classes.pageBtn} onClick={prevPageHandler}>
+            Prev. Page
+          </button>
+        )}
         <p>Page: {page}</p>
         {page >= 1 && gameList.length === 100 && (
-          <button onClick={nextPageHandler} type="button">
+          <button
+            className={classes.pageBtn}
+            onClick={nextPageHandler}
+            type="button"
+          >
             Next Page
           </button>
         )}

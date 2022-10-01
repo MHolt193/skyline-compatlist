@@ -1,0 +1,25 @@
+.btn{
+    height: 40px;
+    width: 80px;
+    background-color: transparent;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.playable{
+    color: rgb(3, 163, 3);
+    border: 2px solid rgb(3, 163, 3)
+    
+}
+.ingame{
+    color: rgb(64, 99, 255);
+    border: 2px solid rgb(64, 99, 255);
+}
+.boots{
+    color: rgb(245, 245, 26);
+    border: 2px solid rgb(245, 245, 26);
+}
+.nothing{
+    color: red;
+    border: 2px solid red;
+}

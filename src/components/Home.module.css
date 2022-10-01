@@ -1,16 +1,20 @@
-.container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(18 18 18);
-    color: white;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(18 18 18);
+  color: white;
 }
-.pageContainer{
-    display: flex;
-    justify-content:center;
-    align-items:center;
-    gap: 10px;
+.pageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.pageBtn{
+    height: 40px;
+    width: 80px;
 }
