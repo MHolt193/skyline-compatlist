@@ -1,12 +1,14 @@
 .container{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: rgb(24 24 27);
     margin-bottom: 4px;
     margin-left: 10px;
     margin-right: 10px;
-    min-width: 450px;
+    min-width: 365px;
     max-width: 800px;
+    height: 70px;
 }
 .hidden{display: none;}
 .link{
@@ -17,11 +19,31 @@
     color: white;
     text-decoration: none;
     margin-left: 15px;
-    margin-right: 15px;
     max-width: 200px;;
+}
+.statusContainer{
+    display: flex;
+    justify-content: flex-end;
+    width: 150px;
 }
 .status{
     margin-right: 15px;
-    margin-left: 15px;
     text-align: right;
+}
+.indicator{
+    height: 15px;
+    width: 15px;
+    display: inline-block;
+}
+.playable{
+    background-color: rgb(9, 160, 9)
+}
+.ingame{
+    background-color: rgb(64, 99, 255);
+}
+.boots{
+    background-color: rgb(245, 245, 26);;
+}
+.nothing{
+    background-color: red;
 }

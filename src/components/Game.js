@@ -29,7 +29,9 @@ const Game = (props) => {
   }, [gameStatus, props.labels]);
 
   return (
-    <div className={props.labels.length === 0 ? classes.hidden: classes.container}>
+    <div
+      className={props.labels.length === 0 ? classes.hidden : classes.container}
+    >
       <a
         className={classes.link}
         href={props.url}
@@ -38,7 +40,22 @@ const Game = (props) => {
       >
         {props.gameTitle}
       </a>
-      <p className={classes.status}>Status: {gameStatus}</p>
+      <div className={classes.statusContainer}>
+        <p className={classes.status}>
+          {gameStatus}{" "}
+          <div
+            className={
+              gameStatus === "Nothing"
+                ? `${classes.indicator} ${classes.nothing}`
+                : gameStatus === "Boots"
+                ? `${classes.indicator} ${classes.boots}`
+                : gameStatus === "In-Game"
+                ? `${classes.indicator} ${classes.ingame}`
+                : `${classes.indicator} ${classes.playable}`
+            }
+          ></div>
+        </p>
+      </div>
     </div>
   );
 };
