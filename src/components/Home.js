@@ -8,6 +8,8 @@ const Home = () => {
   const [gameList, setGameList] = useState([]);
   const [page, setPage] = useState(1);
   const [gameStatus, setGameStatus] = useState("");
+  const [searchValue, setSearchValue] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
     const getList = async () => {
@@ -27,6 +29,22 @@ const Home = () => {
     getList();
   }, [page, gameStatus]);
 
+  //Search useEffect
+  useEffect(() => {
+    let response;
+    const getSearch = async () => {
+      if (searchValue.length > 0) {
+        response = await axios.get(
+          `https://api.github.com/search/issues?q=is:issue%20repo:skyline-emu/skyline-games-list%20${searchValue}`
+        );
+      }
+      const data = await response.data;
+      setSearchResults(data.items);
+      console.log(data);
+    };
+    getSearch();
+  }, [searchValue]);
+
   const statusChangeHandler = (status) => {
     setPage(() => 1);
     setGameStatus(() => status);
@@ -40,22 +58,38 @@ const Home = () => {
     setPage((prev) => prev - 1);
   };
 
+  const searchHandler = (e) => {
+    e.preventDefault();
+    setSearchValue(e.target.search.value);
+  };
+
   return (
     <div className={classes.container}>
       <StatusSelect
         statusChangeHandler={statusChangeHandler}
-        setPage={setPage}
+        searchHandler={searchHandler}
       />
-      {gameList.map((game) => {
-        return (
-          <Game
-            gameTitle={game.title}
-            labels={game.labels}
-            url={game.html_url}
-            key={game.title}
-          />
-        );
-      })}{" "}
+      {searchResults?.length > 0
+        ? searchResults.map((game) => {
+            return (
+              <Game
+                gameTitle={game.title}
+                labels={game.labels}
+                url={game.html_url}
+                key={game.title}
+              />
+            );
+          })
+        : gameList.map((game) => {
+            return (
+              <Game
+                gameTitle={game.title}
+                labels={game.labels}
+                url={game.html_url}
+                key={game.title}
+              />
+            );
+          })}{" "}
       <div className={classes.pageContainer}>
         {page > 1 && (
           <button className={classes.pageBtn} onClick={prevPageHandler}>
