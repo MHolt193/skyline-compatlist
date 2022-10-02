@@ -10,7 +10,7 @@ const Search = (props) => {
           type="search"
           placeholder="Search Game Title"
           className={classes.searchBar}
-          autocomplete="off"
+          autoComplete="off"
         />
         <button type="submit" className={classes.searchBtn}>
           Search
