@@ -1,0 +1,25 @@
+.searchContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.searchBar{
+    width: 200px;
+    height: 40px;
+    margin-right: 5px;
+    border-radius: 5px;
+    background-color: rgb(24 24 27);
+    color: white;
+    border: 2px solid grey;
+    
+}
+.searchBtn{
+    height: 40px;
+    width: 80px;
+    color: grey;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid grey;
+    cursor: pointer;
+}

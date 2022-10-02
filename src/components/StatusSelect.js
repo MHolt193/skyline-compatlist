@@ -1,10 +1,12 @@
 import React from "react";
 import StatusButton from "./StatusButton";
+import Search from './Search'
 import classes from './StatusSelect.module.css'
 const StatusSelect = (props) => {
   return (
     <div className={classes.container}>
       <h1>Skyline Emulator Compatibility</h1>
+      <Search searchHandler={props.searchHandler}/>
       <div>
         <StatusButton
           value="Playable"
