@@ -43,7 +43,8 @@ const Game = (props) => {
       <div className={classes.statusContainer}>
         <p className={classes.status}>
           {gameStatus}{" "}
-          <div
+          
+        </p><div
             className={
               gameStatus === "Nothing"
                 ? `${classes.indicator} ${classes.nothing}`
@@ -54,7 +55,6 @@ const Game = (props) => {
                 : `${classes.indicator} ${classes.playable}`
             }
           ></div>
-        </p>
       </div>
     </div>
   );
