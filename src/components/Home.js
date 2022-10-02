@@ -44,6 +44,12 @@ const Home = () => {
     getSearch();
   }, [searchValue]);
 
+  const resetHandler = () =>{
+    setPage(()=> 1);
+    setSearchResults([]);
+    setGameStatus(()=> '')
+  }
+
   const statusChangeHandler = (status) => {
     setPage(() => 1);
     setGameStatus(() => status);
@@ -60,6 +66,7 @@ const Home = () => {
   const searchHandler = (e) => {
     e.preventDefault();
     setSearchValue(e.target.search.value);
+    e.target.search.value = '';
   };
 
   return (
@@ -67,6 +74,7 @@ const Home = () => {
       <StatusSelect
         statusChangeHandler={statusChangeHandler}
         searchHandler={searchHandler}
+        resetHandler={resetHandler}
       />
       {searchResults?.length > 0
         ? searchResults.map((game) => {

@@ -5,7 +5,7 @@ import classes from './StatusSelect.module.css'
 const StatusSelect = (props) => {
   return (
     <div className={classes.container}>
-      <h1>Skyline Emulator Compatibility</h1>
+      <h1 className={classes.title} onClick={props.resetHandler}>Skyline Emulator Compatibility</h1>
       <Search searchHandler={props.searchHandler}/>
       <div>
         <StatusButton

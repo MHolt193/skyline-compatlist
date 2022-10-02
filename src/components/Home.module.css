@@ -15,6 +15,11 @@
   gap: 10px;
 }
 .pageBtn{
-    height: 40px;
-    width: 80px;
+  height: 40px;
+  width: 80px;
+  color: grey;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 2px solid grey;
+  cursor: pointer;
 }
