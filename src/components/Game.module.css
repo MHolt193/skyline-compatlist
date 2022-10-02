@@ -6,9 +6,8 @@
     margin-bottom: 4px;
     margin-left: 10px;
     margin-right: 10px;
-    min-width: 365px;
-    max-width: 800px;
-    height: 70px;
+    width: 365px;
+    height: 75px;
 }
 .hidden{display: none;}
 .link{
@@ -26,9 +25,10 @@
     justify-content: flex-end;
     align-items: center;
     width: 150px;
+    margin-right: 10px;
 }
 .status{
-    margin-right: 15px;
+    margin-right: 5px;
     text-align: right;
 }
 .indicator{
