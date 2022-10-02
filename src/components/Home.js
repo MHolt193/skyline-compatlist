@@ -31,16 +31,15 @@ const Home = () => {
 
   //Search useEffect
   useEffect(() => {
-    let response;
     const getSearch = async () => {
+      let response;
       if (searchValue.length > 0) {
         response = await axios.get(
           `https://api.github.com/search/issues?q=is:issue%20repo:skyline-emu/skyline-games-list%20${searchValue}`
         );
+        const data = await response.data;
+        setSearchResults(data.items);
       }
-      const data = await response.data;
-      setSearchResults(data.items);
-      console.log(data);
     };
     getSearch();
   }, [searchValue]);
