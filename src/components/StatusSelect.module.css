@@ -5,6 +5,10 @@
     flex-direction: column;
     margin-bottom: 20px;
 }
+.btnContainer{
+    display: flex;
+}
 .title{
     cursor: pointer;
+    text-align: center;
 }
