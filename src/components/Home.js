@@ -32,6 +32,7 @@ const Home = () => {
     getList();
   }, [page, gameStatus]);
 
+  //page count
   useEffect(() => {
     for (let i = 0; i < headersLink.length; i++) {
       if (headersLink[i].includes('rel="last"')) {
