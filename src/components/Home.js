@@ -10,6 +10,8 @@ const Home = () => {
   const [gameStatus, setGameStatus] = useState("");
   const [searchValue, setSearchValue] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+  const [headersLink, setHeadersLink] = useState([]);
+  const [numberOfPages, setNumberOfPages] = useState("");
 
   useEffect(() => {
     const getList = async () => {
@@ -25,9 +27,20 @@ const Home = () => {
       }
       const data = await response.data;
       setGameList(data);
+      setHeadersLink(() => response.headers.link.split(","));
     };
     getList();
   }, [page, gameStatus]);
+
+  useEffect(() => {
+    for (let i = 0; i < headersLink.length; i++) {
+      if (headersLink[i].includes('rel="last"')) {
+        setNumberOfPages(
+          headersLink[i].match(/&page=(\d+)/g)[0].match(/\d+/)[0]
+        );
+      }
+    }
+  }, [headersLink]);
 
   //Search useEffect
   useEffect(() => {
@@ -44,11 +57,11 @@ const Home = () => {
     getSearch();
   }, [searchValue]);
 
-  const resetHandler = () =>{
-    setPage(()=> 1);
+  const resetHandler = () => {
+    setPage(() => 1);
     setSearchResults([]);
-    setGameStatus(()=> '')
-  }
+    setGameStatus(() => "");
+  };
 
   const statusChangeHandler = (status) => {
     setPage(() => 1);
@@ -66,7 +79,7 @@ const Home = () => {
   const searchHandler = (e) => {
     e.preventDefault();
     setSearchValue(e.target.search.value);
-    e.target.search.value = '';
+    e.target.search.value = "";
   };
 
   return (
@@ -103,7 +116,9 @@ const Home = () => {
             Prev. Page
           </button>
         )}
-        <p>Page: {page}</p>
+        <p>
+          Page: {page} / {numberOfPages}
+        </p>
         {page >= 1 && gameList.length === 100 && (
           <button
             className={classes.pageBtn}
