@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import StatusSelect from "./StatusSelect";
 import Game from "./Game";
+import PageControl from './PageControl'
 import classes from "./Home.module.css";
 
 const Home = () => {
@@ -112,7 +113,7 @@ const Home = () => {
             );
           })}{" "}
       <div className={classes.pageContainer}>
-        {page > 1 && (
+         {page > 1 && (
           <button className={classes.pageBtn} onClick={prevPageHandler}>
             Prev. Page
           </button>
@@ -128,7 +129,8 @@ const Home = () => {
           >
             Next Page
           </button>
-        )}
+        )}  
+        
       </div>
     </div>
   );
