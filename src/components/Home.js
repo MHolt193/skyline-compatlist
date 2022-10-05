@@ -3,10 +3,11 @@ import axios from "axios";
 import StatusSelect from "./StatusSelect";
 import Game from "./Game";
 import classes from "./Home.module.css";
+import PageControl from "./PageControl";
 
 const Home = () => {
   const [gameList, setGameList] = useState([]);
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(2);
   const [gameStatus, setGameStatus] = useState("");
   const [searchValue, setSearchValue] = useState("");
   const [searchResults, setSearchResults] = useState([]);
@@ -111,7 +112,7 @@ const Home = () => {
               />
             );
           })}{" "}
-      <div className={classes.pageContainer}>
+     {/* <div className={classes.pageContainer}>
         {page > 1 && (
           <button className={classes.pageBtn} onClick={prevPageHandler}>
             Prev. Page
@@ -129,7 +130,8 @@ const Home = () => {
             Next Page
           </button>
         )}
-      </div>
+        </div>*/}
+        <PageControl page={page} numberOfPages={numberOfPages} setPage={setPage}/>
     </div>
   );
 };
