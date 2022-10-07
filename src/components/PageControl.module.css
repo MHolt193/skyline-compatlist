@@ -1,0 +1,55 @@
+.pageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  .firstPage{
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    height: 40px;
+    width: 40px;
+    color: grey;
+    background-color: transparent;
+    border: 2px solid grey;
+    border-right: none;
+    font-weight: bold;
+  }
+  .lastPage{
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 40px;
+    width: 40px;
+    color: grey;
+    background-color: transparent;
+    border: 2px solid grey;
+    font-weight: bold;
+    border-left: none;
+  }
+  .btn{
+    height: 40px;
+    width: 30px;
+    background-color: transparent;
+    color: grey;
+    border: 2px solid grey;
+  }
+  .active{
+    background-color: rgb(34, 34, 41);
+    color: white;
+    border-left: none;
+    border-right: none;
+  }
+  .activeFirstPage{
+    background-color: rgb(34, 34, 41);
+    color: white;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right: none;
+  }
+  .activeLastPage{
+    background-color: rgb(34, 34, 41);
+    color: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: none;
+  }
