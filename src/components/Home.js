@@ -7,7 +7,7 @@ import PageControl from "./PageControl";
 
 const Home = () => {
   const [gameList, setGameList] = useState([]);
-  const [page, setPage] = useState(2);
+  const [page, setPage] = useState(1);
   const [gameStatus, setGameStatus] = useState("");
   const [searchValue, setSearchValue] = useState("");
   const [searchResults, setSearchResults] = useState([]);
