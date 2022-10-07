@@ -70,14 +70,6 @@ const Home = () => {
     setPage(() => 1);
     setGameStatus(() => status);
   };
-  const nextPageHandler = () => {
-    window.scroll(0, 0);
-    setPage((prev) => prev + 1);
-  };
-  const prevPageHandler = () => {
-    window.scroll(0, 0);
-    setPage((prev) => prev - 1);
-  };
 
   const searchHandler = (e) => {
     e.preventDefault();
