@@ -54,6 +54,7 @@ const Home = () => {
         );
         const data = await response.data;
         setSearchResults(data.items);
+
       }
     };
     getSearch();
