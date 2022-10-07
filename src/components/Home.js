@@ -112,12 +112,12 @@ const Home = () => {
               />
             );
           })}{" "}
-
-      <PageControl
+          <PageControl
         page={page}
         numberOfPages={numberOfPages}
         setPage={setPage}
       />
+      
 
     </div>
   );
