@@ -112,26 +112,6 @@ const Home = () => {
               />
             );
           })}{" "}
-      <div className={classes.pageContainer}>
-         {page > 1 && (
-          <button className={classes.pageBtn} onClick={prevPageHandler}>
-            Prev. Page
-          </button>
-        )}
-        <p>
-          Page: {page} / {numberOfPages}
-        </p>
-        {page >= 1 && gameList.length === 100 && (
-          <button
-            className={classes.pageBtn}
-            onClick={nextPageHandler}
-            type="button"
-          >
-            Next Page
-          </button>
-        )}  
-        
-      </div>
     </div>
   );
 };
