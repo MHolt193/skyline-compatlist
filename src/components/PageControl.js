@@ -1,20 +1,61 @@
 import React from "react";
+import classes from "./PageControl.module.css";
 
 const PageControl = (props) => {
+  const firstPageHandler = () => {
+    props.setPage(1);
+  };
+  const lastPageHandler = () => {
+    props.setPage(() => Number(props.numberOfPages));
+  };
+  const pageNumberHandler = (e) => {
+    props.setPage(() => Number(e.target.innerText));
+  };
   return (
-    <div>
-      {props.page > 1 && <button onClick={()=>props.setPage(1)}>{"<<"}</button>}
+    <div className={classes.pageContainer}>
+      {props.page > 1 && (
+        <button onClick={firstPageHandler} className={classes.firstPage}>
+          {"<<"}
+        </button>
+      )}
       {props.page === 1 ? (
-        <button>{props.page}</button>
+        <button className={`${classes.btn} ${classes.activeFirstPage}`}>
+          {props.page}
+        </button>
       ) : (
-        <button>{props.page - 1}</button>
+        <button
+          type="button"
+          onClick={pageNumberHandler}
+          className={classes.btn}
+        >
+          {props.page - 1}
+        </button>
       )}
       {props.page > 1 ? (
-        <button>{props.page}</button>
+        <button
+          className={
+            props.page < props.numberOfPages
+              ? `${classes.btn} ${classes.active}`
+              : `${classes.btn} ${classes.activeLastPage}`
+          }
+        >
+          {props.page}
+        </button>
       ) : (
-        <button>{props.page + 1}</button>
+        <button onClick={pageNumberHandler} className={classes.btn}>
+          {props.page + 1}
+        </button>
       )}
-      {props.page > 1 && <button>{props.page+1}</button>} 
+      {props.page > 1 && props.page < props.numberOfPages && (
+        <button onClick={pageNumberHandler} className={classes.btn}>
+          {props.page + 1}
+        </button>
+      )}
+      {props.page < props.numberOfPages && (
+        <button onClick={lastPageHandler} className={classes.lastPage}>
+          {">>"}
+        </button>
+      )}
     </div>
   );
 };
