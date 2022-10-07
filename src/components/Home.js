@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import StatusSelect from "./StatusSelect";
 import Game from "./Game";
+import PageControl from './PageControl'
 import classes from "./Home.module.css";
 import PageControl from "./PageControl";
 
@@ -112,11 +113,13 @@ const Home = () => {
               />
             );
           })}{" "}
+
       <PageControl
         page={page}
         numberOfPages={numberOfPages}
         setPage={setPage}
       />
+
     </div>
   );
 };
