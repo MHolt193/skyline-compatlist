@@ -3,13 +3,16 @@ import classes from "./PageControl.module.css";
 
 const PageControl = (props) => {
   const firstPageHandler = () => {
+    window.scroll(0,0);
     props.setPage(1);
   };
   const lastPageHandler = () => {
     props.setPage(() => Number(props.numberOfPages));
+    window.scroll(0,0)
   };
   const pageNumberHandler = (e) => {
     props.setPage(() => Number(e.target.innerText));
+    window.scroll(0,0);
   };
   return (
     <div className={classes.pageContainer}>
