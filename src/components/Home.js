@@ -4,7 +4,6 @@ import StatusSelect from "./StatusSelect";
 import Game from "./Game";
 import PageControl from './PageControl'
 import classes from "./Home.module.css";
-import PageControl from "./PageControl";
 
 const Home = () => {
   const [gameList, setGameList] = useState([]);
