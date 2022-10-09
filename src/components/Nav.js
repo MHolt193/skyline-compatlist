@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import logo from "../img/logo.png";
 import classes from "./Nav.module.css";
-import {BiMenu, BiX} from 'react-icons/bi'
+import { BiMenu, BiX } from "react-icons/bi";
 
 const Nav = (props) => {
   const [isMobile, setIsMobile] = useState(false);
@@ -52,7 +52,7 @@ const Nav = (props) => {
           className={classes.menuButton}
           type="button"
         >
-          {!menuOpen ? <BiMenu />: <BiX />}
+          {!menuOpen ? <BiMenu /> : <BiX />}
         </button>
       )}
       {isMobile && menuOpen && (
