@@ -3,6 +3,7 @@ import axios from "axios";
 import StatusSelect from "./StatusSelect";
 import Game from "./Game";
 import PageControl from './PageControl'
+import Nav from './Nav'
 import classes from "./Home.module.css";
 
 const Home = () => {
@@ -79,6 +80,7 @@ const Home = () => {
 
   return (
     <div className={classes.container}>
+      <Nav resetHandler={resetHandler}/>
       <StatusSelect
         statusChangeHandler={statusChangeHandler}
         searchHandler={searchHandler}

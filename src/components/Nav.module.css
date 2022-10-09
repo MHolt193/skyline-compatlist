@@ -1,0 +1,87 @@
+.nav{
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(18 18 18);
+    height: 60px;
+}
+.logoContainer{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    gap: 5px;
+    cursor: pointer;
+}
+.logo{
+    height: 50px;
+    width: 50px;
+    border-radius:60px;
+}
+.skyline{
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+}
+.emulator{
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: 0;
+    padding:0;
+    color: rgb(107 114 128)
+}
+.linksContainer{
+    display: flex;
+    gap: 15px;
+    color: white;
+    list-style: none;
+    align-items: center;
+    font-weight: bold;
+}
+.linksContainer a{
+    color: white;
+    text-decoration: none
+}
+.linksContainer a:visited{
+    text-decoration: none;
+    color: white;
+}
+.linksContainer a:hover{
+    text-decoration: none;
+    color: rgb(78, 137, 255)
+}
+.menuButton{
+    font-size: 45px;
+    height: 60px;
+    background-color:transparent;
+    color: rgb(107 114 128);
+    border:none;
+    cursor:pointer;
+}
+
+
+@media screen and (max-width:720px){
+    .nav{
+        display: flex;
+        position: relative;
+        justify-content:space-between;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 60px;
+    }
+    .linksContainer{
+        position: absolute;
+        top: 58px;
+        left: -4px;
+        background-color: rgb(18 18 18);
+        width: 92%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        height:110px;
+    }
+}

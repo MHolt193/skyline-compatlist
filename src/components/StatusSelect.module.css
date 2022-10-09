@@ -4,6 +4,7 @@
     align-items: center;
     flex-direction: column;
     margin-bottom: 20px;
+    margin-top: 60px;
 }
 .btnContainer{
     display: flex;
@@ -12,4 +13,9 @@
     cursor: pointer;
     text-align: center;
     font-size: 22px;
+}
+@media  screen and (max-width:720px) {
+    .container{
+        margin-top: 20px;
+    }
 }
