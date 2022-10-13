@@ -8,6 +8,7 @@
     margin-right: 10px;
     width: 100%;
     height: 75px;
+    font-family: 'Inter', sans-serif;
 }
 .hidden{display: none;}
 .link{
@@ -19,6 +20,9 @@
     text-decoration: none;
     margin-left: 15px;
     width: 250px;;
+}
+.link:hover{
+    color: rgb(66 133 244);
 }
 .statusContainer{
     display: flex;
