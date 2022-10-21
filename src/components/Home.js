@@ -29,7 +29,6 @@ const Home = () => {
       }
       const data = await response.data;
       setGameList(data);
-      console.log(data)
       setHeadersLink(() => response.headers.link.split(","));
     };
     getList();
@@ -95,7 +94,6 @@ const Home = () => {
                 labels={game.labels}
                 url={game.html_url}
                 key={game.title}
-                testedBy={game.user.login}
               />
             );
           })
@@ -106,7 +104,6 @@ const Home = () => {
                 labels={game.labels}
                 url={game.html_url}
                 key={game.title}
-                testedBy={game.user.login}
               />
             );
           })}{" "}

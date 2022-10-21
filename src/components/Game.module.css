@@ -1,16 +1,14 @@
 .container{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    gap: 15px;
     background-color: rgb(24 24 27);
     margin-bottom: 4px;
     margin-left: 10px;
     margin-right: 10px;
     width: 100%;
-    min-height: 75px;
+    height: 75px;
     font-family: 'Inter', sans-serif;
-    font-size: 14px;
 }
 .hidden{display: none;}
 .link{
@@ -21,10 +19,7 @@
     color: white;
     text-decoration: none;
     margin-left: 15px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 33%;
-    font-size: 14px;
+    width: 250px;;
 }
 .link:hover{
     color: rgb(66 133 244);
@@ -33,13 +28,12 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 33%;
+    width: 200px;
     margin-right: 10px;
 }
 .status{
     margin-right: 5px;
     text-align: right;
-    font-size: 14px;
 }
 .indicator{
     height: 15px;
@@ -57,11 +51,6 @@
 }
 .nothing{
     background-color: red;
-}
-.testedBy{
-    width: 33%;
-    font-size: 14px;
-    margin-left: 25px;
 }
 @media screen and (min-width: 768px){
     .container{
