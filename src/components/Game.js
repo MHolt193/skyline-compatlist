@@ -40,6 +40,7 @@ const Game = (props) => {
       >
         {props.gameTitle}
       </a>
+      <p className={classes.testedBy}>Tested by: {props.testedBy}</p>
       <div className={classes.statusContainer}>
         <p className={classes.status}>
           {gameStatus}{" "}
