@@ -1,4 +1,4 @@
-<h1 align="center">Skyline Compatability list</h1>
+<h1 align="center">Skyline Compatibility list</h1>
 
 <div align="center">
    Front-End for the official compatibility list hosted on <a href="https://github.com/skyline-emu/skyline-games-list/issues" target="_blank">GitHub</a>
@@ -21,7 +21,7 @@
 
 ![image](https://user-images.githubusercontent.com/76035004/198697391-ed29d616-1ef3-4ae5-b2f4-6910aa12d984.png)
 
-- You can visit the live website at [Skyline Compatability](https://skylinecompatibility.netlify.app)
+- You can visit the live website at [Skyline Compatibility](https://skylinecompatibility.netlify.app)
 - I have had a great time creating this project. when first released it was not as polished, but I wanted to get something out to the community pretty quickly since I had seen an HTML list requested multiple times in the official discord and on the subreddit EmulationOnAndroid. I added pagination and a search feature at community request. I also added the number of games in each category at the request of the skyline community.
 <br>
 The most dificult part of this project was the pagination, I had to parse the total number of pages from the last page link sent in the headers from the GitHub API. This was also my first project created without create-react-app so setting up webpack was a great learning experience.
