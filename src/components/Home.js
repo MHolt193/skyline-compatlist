@@ -29,20 +29,21 @@ const Home = () => {
       }
       const data = await response.data;
       setGameList(data);
-      setHeadersLink(() => response.headers.link.split(","));
+      setHeadersLink(() => response.headers.link?.split(","));
     };
     getList();
   }, [page, gameStatus]);
 
   //page count
   useEffect(() => {
+    if(headersLink){
     for (let i = 0; i < headersLink.length; i++) {
       if (headersLink[i].includes('rel="last"')) {
         setNumberOfPages(
           headersLink[i].match(/&page=(\d+)/g)[0].match(/\d+/)[0]
         );
       }
-    }
+    }};
   }, [headersLink]);
 
   //Search useEffect
@@ -103,7 +104,7 @@ const Home = () => {
                 gameTitle={game.title}
                 labels={game.labels}
                 url={game.html_url}
-                key={game.title}
+                key={game.title + ` ${Math.floor(Math.random() * 1000)}`}
               />
             );
           })}{" "}
